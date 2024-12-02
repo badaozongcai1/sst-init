@@ -4,6 +4,8 @@ export default $config({
   app(input) {
     return {
       name: "sst-init",
+      // region us-east-1
+      // 这个节点速度快
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
     };
