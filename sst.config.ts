@@ -1,6 +1,7 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
 export default $config({
+  // Your app's config
   app(input) {
     return {
       name: "sst-init",
@@ -10,6 +11,7 @@ export default $config({
       home: "aws",
     };
   },
+  // Your app's resources
   async run() {
     new sst.aws.Nextjs("MyWeb");
   },
