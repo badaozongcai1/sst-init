@@ -13,6 +13,14 @@ export default $config({
   },
   // Your app's resources
   async run() {
-    new sst.aws.Nextjs("MyWeb");
+    new sst.aws.Nextjs("MyWeb", {
+      server: {
+        edge: {
+          viewerRequest: {
+            injection: ``,
+          },
+        },
+      },
+    });
   },
 });
